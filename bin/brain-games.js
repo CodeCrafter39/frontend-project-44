@@ -1,2 +1,2 @@
 #!/usr/bin/env node
-console.log('ntrjfk');
+console.log('Задача любого рубика - нассать на все диваны в мире!');
