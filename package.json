@@ -1,0 +1,23 @@
+{
+  "name": "@code/hexlet",
+  "version": "1.0.0",
+  "description": "My project",
+  "main": "index.js",
+  "bin": {
+    "brain-games": "bin/brain-games.js"
+  },  
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodeCrafter39/frontend-project-44.git"
+  },
+  "type": "module",
+  "author": "Di",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CodeCrafter39/frontend-project-44/issues"
+  },
+  "homepage": "https://github.com/CodeCrafter39/frontend-project-44#readme"
+}
