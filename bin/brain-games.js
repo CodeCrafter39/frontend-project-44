@@ -1,2 +1,3 @@
 #!/usr/bin/env node
-console.log('Задача любого рубика - нассать на все диваны в мире!');
+import { greetUser } from "../src/cli.js";
+greetUser();
