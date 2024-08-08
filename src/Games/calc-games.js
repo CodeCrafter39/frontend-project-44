@@ -7,7 +7,7 @@ const calcGame = () => {
   const round = 3;
   const questions = [];
   const correctAnswers = [];
-  for (let i = 0; i < round; i = i + 1) {
+  for (let i = 0; i < round; i += 1) {
     const { expression, result } = generateExpressionAndResult();
     questions.push(expression);
     correctAnswers.push(result.toString());
