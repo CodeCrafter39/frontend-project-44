@@ -7,11 +7,6 @@ const calcGame = () => {
   const round = 3;
   const questions = [];
   const correctAnswers = [];
-  for (let i = 0; i < round; i += 1) {
-    const { expression, result } = generateExpressionAndResult();
-    questions.push(expression);
-    correctAnswers.push(result.toString());
-  }
 
   // Функция для генерации случайного математического выражения и его результата
 
@@ -46,6 +41,11 @@ const calcGame = () => {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
 
+  for (let i = 0; i < round; i += 1) {
+    const { expression, result } = generateExpressionAndResult();
+    questions.push(expression);
+    correctAnswers.push(result.toString());
+  }
   makeGame(questions, correctAnswers, 'What is the result of the expression?');
 };
 export default calcGame;
