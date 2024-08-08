@@ -2,12 +2,12 @@ import makeGame from '../index.js';
 
 // Сбор данных для игры
 
-export const calcGame = () => {
+const calcGame = () => {
   console.log('What is the result of the expression?');
   const round = 3;
   const questions = [];
   const correctAnswers = [];
-  for (let i = 0; i < round; i++) {
+  for (let i = 0; i < round; i = i + 1) {
     const { expression, result } = generateExpressionAndResult();
     questions.push(expression);
     correctAnswers.push(result.toString());
@@ -44,3 +44,4 @@ export const calcGame = () => {
 
   makeGame(questions, correctAnswers, 'What is the result of the expression?');
 };
+export default calcGame;
