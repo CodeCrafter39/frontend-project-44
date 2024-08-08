@@ -14,8 +14,8 @@ const gcdGame = () => {
 
   // Функция для генерации случайного числа в заданном диапазоне
   function getRandomInt(newmin, newmax) {
-    min = Math.ceil(newmin);
-    max = Math.floor(newmax);
+    const min = Math.ceil(newmin);
+    const max = Math.floor(newmax);
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
 
