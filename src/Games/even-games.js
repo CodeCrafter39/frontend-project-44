@@ -2,13 +2,13 @@ import makeGame from '../index.js';
 
 // Сбор данных для игры
 
-export const runGame = () => {
+const runGame = () => {
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
   const isEven = (num) => num % 2 === 0;
   const round = 3;
   const questions = [];
   const correctAnswers = [];
-  for (let i = 0; i < round; i++) {
+  for (let i = 0; i < round; i += 1) {
     const question = Math.floor(Math.random() * 100);
     const correctAnswer = isEven(question) ? 'yes' : 'no';
     questions.push(question);
@@ -16,3 +16,4 @@ export const runGame = () => {
   }
   makeGame(questions, correctAnswers, 'Answer "yes" if the number is even, otherwise answer "no".');
 };
+export default runGame;

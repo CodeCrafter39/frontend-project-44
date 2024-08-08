@@ -1,6 +1,6 @@
 import makeGame from '../index.js';
 
-export const gcdGame = () => {
+const gcdGame = () => {
   console.log('Find the greatest common divisor of given numbers.');
   const round = 3;
   const questions = [];
@@ -13,14 +13,14 @@ export const gcdGame = () => {
   }
 
   // Функция для генерации случайного числа в заданном диапазоне
-  function getRandomInt(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
+  function getRandomInt(newmin, newmax) {
+    min = Math.ceil(newmin);
+    max = Math.floor(newmax);
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
 
   // Основной цикл игры
-  for (let i = 0; i < round; i++) {
+  for (let i = 0; i < round; i += 1) {
     const num1 = getRandomInt(1, 100);
     const num2 = getRandomInt(1, 100);
 
@@ -30,3 +30,4 @@ export const gcdGame = () => {
 
   makeGame(questions, correctAnswers, 'Find the greatest common divisor of given numbers.');
 };
+export default gcdGame;

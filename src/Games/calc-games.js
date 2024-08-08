@@ -12,11 +12,6 @@ const calcGame = () => {
     questions.push(expression);
     correctAnswers.push(result.toString());
   }
-  // Функция для генерации случайного числа в заданном диапазоне
-
-  function getRandomInt(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-  }
 
   // Функция для генерации случайного математического выражения и его результата
 
@@ -38,8 +33,17 @@ const calcGame = () => {
       case '*':
         result = num1 * num2;
         break;
+      default:
+        console.log('');
+        break;
     }
     return { expression, result };
+  }
+
+  // Функция для генерации случайного числа в заданном диапазоне
+
+  function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
   }
 
   makeGame(questions, correctAnswers, 'What is the result of the expression?');

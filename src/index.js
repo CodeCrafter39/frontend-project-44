@@ -8,7 +8,7 @@ const makeGame = (questions, correctAnswers, instruction) => {
   console.log(`Hello, ${name}!`);
   console.log(instruction);
 
-  for (let i = 0; i < questions.length; i++) {
+  for (let i = 0; i < questions.length; i += 1) {
     console.log(`Question: ${questions[i]}`);
     const userAnswer = readlineSync.question('Your answer: ').toLowerCase();
 
