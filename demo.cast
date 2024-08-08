@@ -1,0 +1,7 @@
+{"version": 2, "width": 140, "height": 8, "timestamp": 1723134627, "env": {"SHELL": "/bin/bash", "TERM": "xterm-256color"}}
+[0.028803, "o", "\u001b[?2004h\u001b]0;diana@DIANA: ~/frontend-project-44\u0007\u001b[01;32mdiana@DIANA\u001b[00m:\u001b[01;34m~/frontend-project-44\u001b[00m$ "]
+[9.429809, "o", "f"]
+[9.626378, "o", "\r\n\u001b[?2004l\r"]
+[9.764354, "o", "f: команда не найдена\r\n"]
+[9.783281, "o", "\u001b[?2004h\u001b]0;diana@DIANA: ~/frontend-project-44\u0007\u001b[01;32mdiana@DIANA\u001b[00m:\u001b[01;34m~/frontend-project-44\u001b[00m$ "]
+[15.579687, "o", "\u001b[?2004l\r\r\nexit\r\n"]
