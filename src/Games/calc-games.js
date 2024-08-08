@@ -5,10 +5,15 @@ import makeGame from '../index.js';
 const calcGame = () => {
   console.log('What is the result of the expression?');
   const round = 3;
-  const questions = [];
-  const correctAnswers = [];
 
   // Функция для генерации случайного математического выражения и его результата
+
+  function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+
+  const questions = [];
+  const correctAnswers = [];
 
   function generateExpressionAndResult() {
     const num1 = getRandomInt(1, 50);
@@ -36,10 +41,6 @@ const calcGame = () => {
   }
 
   // Функция для генерации случайного числа в заданном диапазоне
-
-  function getRandomInt(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-  }
 
   for (let i = 0; i < round; i += 1) {
     const { expression, result } = generateExpressionAndResult();
