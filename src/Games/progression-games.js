@@ -1,32 +1,31 @@
 import makeGame from '../index.js';
+import getRandomInt from './utils.js';
 
-const progressGame = () => {
-  console.log('What number is missing in the progression?');
-  const round = 3;
-  const questions = [];
-  const correctAnswers = [];
-
-  function generateProgression(length, start, step) {
-    const progression = [];
-    for (let i = 0; i < length; i += 1) {
-      progression.push(start + i * step);
-    }
-    return progression;
+function generateProgression(length, start, step) {
+  const progression = [];
+  for (let i = 0; i < length; i += 1) {
+    progression.push(start + i * step);
   }
+  return progression;
+}
 
-  for (let i = 0; i < round; i += 1) {
-    const length = 10; // Фиксированная длина
-    const start = Math.floor(Math.random() * 20) + 1;
-    const step = Math.floor(Math.random() * 10) + 1;
-    const hiddenIndex = Math.floor(Math.random() * length);
-    const progression = generateProgression(length, start, step);
+const getData = () => {
+  const length = 10;
+  const start = getRandomInt(1, 20);
+  const step = getRandomInt(1, 10);
+  const hiddenIndex = getRandomInt(0, length - 1);
+  const progression = generateProgression(length, start, step);
+  const correctAnswer = progression[hiddenIndex].toString();
+  progression[hiddenIndex] = '..';
+  const question = progression.join(' ');
 
-    correctAnswers.push(progression[hiddenIndex].toString());
-    progression[hiddenIndex] = '..';
-
-    questions.push(progression.join(' '));
-  }
-
-  makeGame(questions, correctAnswers, 'What number is missing in the progression?');
+  return [question, correctAnswer];
 };
-export default progressGame;
+
+const instruction = 'What number is missing in the progression?';
+
+const startProgressGame = () => {
+  makeGame(getData, instruction);
+};
+
+export default startProgressGame;

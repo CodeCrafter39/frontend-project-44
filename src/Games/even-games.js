@@ -1,19 +1,17 @@
 import makeGame from '../index.js';
+import getRandomInt from './utils.js';
 
-// Сбор данных для игры
+const isEven = (num) => num % 2 === 0;
+
+const getData = () => {
+  const question = getRandomInt(1, 100);
+  const correctAnswer = isEven(question) ? 'yes' : 'no';
+  return [question, correctAnswer];
+};
+
+const instruction = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const runGame = () => {
-  console.log('Answer "yes" if the number is even, otherwise answer "no".');
-  const isEven = (num) => num % 2 === 0;
-  const round = 3;
-  const questions = [];
-  const correctAnswers = [];
-  for (let i = 0; i < round; i += 1) {
-    const question = Math.floor(Math.random() * 100);
-    const correctAnswer = isEven(question) ? 'yes' : 'no';
-    questions.push(question);
-    correctAnswers.push(correctAnswer);
-  }
-  makeGame(questions, correctAnswers, 'Answer "yes" if the number is even, otherwise answer "no".');
+  makeGame(getData, instruction);
 };
 export default runGame;
